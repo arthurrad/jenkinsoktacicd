@@ -49,6 +49,13 @@ namespace jenkinsoktaci
         };
       });
 
+      //Configure IIS
+      services.Configure<IISOptions>(options =>
+      {
+        options.AutomaticAuthentication = false;
+      });
+
+
       services.AddMvc();
     }
 
